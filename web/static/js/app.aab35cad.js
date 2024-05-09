@@ -2029,7 +2029,7 @@
         s.a
     },
     6188: function(e, t, n) {
-        e.exports = n.p + "https://raw.githubusercontent.com/moonphase97/hwasung_args/master/coconutlab/color/coconutlab_CI_land.png"
+        e.exports = "https://raw.githubusercontent.com/moonphase97/hwasung_args/master/coconutlab/color/coconutlab_CI_land.png"
     },
     "61b6": function(e) {
         e.exports = JSON.parse('{"_utils":"~~~~~~~~~~~~~~~~~~","common bottom copy right":"Copyright CoconutLab Company. All rights reserved.","common bottom public record":"","simadada company":"코코넛랩","chinese":"简体中文","english":"English","korean":"한국어","VDMS-T-4":"VDMS-T-4","please input your account":"请输入您的账户","please input the password":"请输入对应密码","account is required":"账户不可为空","password is required":"密码不可为空","5-15 characters,letters/numbers/underscores":"5~15位,字母数字或下划线","login":"登录","logout":"登出","you need to reboot device":"你需要重新启动设备来应用保存的配置!","reboot device":"重新启动","Reboot the device?\\nYes,and the device cannot be accessed In about two minutes.":"确定要重启设备吗？\\n确定则设备将在大概两分钟内无法访问。","tip":"提示","your password is not safe":"当前密码为默认密码,请修改密码后再进行设备操作!","cancel":"取消","Reboot device successfully!":"重启设备成功！","Reboot device failed!":"重启设备失败！","Reset the device?":"确定要重置设备吗？\\n确定则设备将在大概两分钟内无法访问。","reset device":"重置设备","Reset device successfully!":"重置设备成功!","Reset device failed!":"重置设备失败!","_device":"~~~~~~~~~~~~~~~~~~","video parameters":"视频参数","IPC settings":"摄像头设置","IP address":"IP地址","port":"端口","username":"用户名","password":"密码","channel":"通道号","protocol":"传输协议","rtsp address":"rtsp地址","compressed parameters settings":"压缩参数设置","payload":"编码格式","image quality":"图像质量","mode":"压缩方式","I frame interval":"I帧间隔","src frame rate":"原始帧率","dst frame rate":"目标帧率","max bit rate":"码率上限","IQp":"压缩参数1","PQp":"压缩参数2","IPC Congurations saved successfully":"视频参数配置更新成功！","_network":"~~~~~~~~~~~~~~~~~~","network settings":"网络设置","save conguration":"保存配置","refresh conguration":"刷新配置","device conguration":"设备配置","subnet mask":"子网掩码","gateway":"网关","cloudserver":"云服务器","enable":"启用","enabled":"已启用","diabled":"已禁用","MAC address":"MAC地址","IP address is required":"IP地址不可为空","IP address is invalid":"IP地址无效","Subnet mask is required":"子网掩码不可为空","Subnet mask is invalid":"子网掩码无效","Gateway IP address is required":"网关IP地址不可为空","Gateway IP address is invalid":"网关IP地址无效","Cloud server IP address is required":"云服务器IP地址不可为空","Cloud server IP address is invalid":"云服务器IP地址无效","Mac address is required":"Mac地址不可为空","Mac address is invalid":"Mac地址无效","Device config changed successfully":"网络设置更新成功！","_account":"~~~~~~~~~~~~~~~~~~","account management":"账户管理","new account":"新账户","new password":"新密码","old password":"旧密码","please input the old password":"请输入原来的密码","please input the new password":"请输入新的密码","optional":"可选","confirm":"确认","account and password changed successfully":"账户密码修改成功！","_version":"~~~~~~~~~~~~~~~~~~","update version":"更新升级","drop file here,or":"将文件拖到此处，或","click to upload":"点击上传","current version":"当前版本号","new version":"新的版本号","only one file can be uploaded":"只能上传一个文件！","Upload new version file successfully!":"上传新版本文件成功！","Upload new version file failed!":"上传新文件失败！","_ntp":"~~~~~~~~~~~~~~~~~~~","ntp config":"校时设置","ntp ip":"NTP服务器IP","ntp port":"NTP服务器端口","ntp frequency":"校时周期/天","ntp time":"校时时间点","ntpInfo changed successfully":"NTP校时服务器设置成功！","_autoreboot":"~~~~~~~~~~~~~~~~~~~","auto reboot config":"自动重启","day frequency":"重启周期/天","reboot time":"重启时间","Reboot config changed successfully":"自动重启设置修改成功！"}')
@@ -2060,7 +2060,7 @@
         s.a
     },
     "964f": function(e, t, n) {
-        e.exports = "./static/img/vis_img1.jpg"
+        e.exports = "https://raw.githubusercontent.com/moonphase97/hwasung_args/master/web/static/img/vis_img1.jpg"
     },
     a55e: function(e, t, n) {},
     acc7: function(e, t, n) {},
@@ -2072,11 +2072,11 @@
         s.a
     },
     c5ab: function(e, t, n) {
-        e.exports = "./static/img/login-bakcground-2.d4b57da6.png"
+        e.exports = n.p+ "/static/img/login-bakcground-2.d4b57da6.png"
     },
     c639: function(e, t, n) {},
     cf05: function(e, t, n) {
-        e.exports = "./static/img/logo.coconut.png"
+        e.exports = "https://raw.githubusercontent.com/moonphase97/hwasung_args/master/coconutlab/black/coconutlab_CI.png"
     },
     e1b7: function(e, t, n) {
         "use strict";
