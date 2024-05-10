@@ -12,7 +12,7 @@
 
 @font-face {
     font-family: element-icons;
-    src: url(../../static/fonts/element-icons.535877f5.woff) format("woff"), url(./static/fonts/element-icons.732389de.ttf) format("truetype");
+    src: url(../../static/fonts/element-icons.535877f5.woff) format("woff"), url(../../static/fonts/element-icons.732389de.ttf) format("truetype");
     font-weight: 400;
     font-style: normal
 }
@@ -4743,6 +4743,10 @@
     text-align: left
 }
 
+.el-form--label-right .el-form-item__label {
+    text-align: right
+}
+
 .el-form--label-top .el-form-item__label {
     float: none;
     display: inline-block;
@@ -4788,7 +4792,7 @@
 }
 
 .el-form-item--mini.el-form-item,.el-form-item--small.el-form-item {
-    margin-bottom: 18px
+    margin-bottom: 5px
 }
 
 .el-form-item .el-input__validateIcon {
@@ -4825,11 +4829,12 @@
 }
 
 .el-form-item__label {
-    text-align: right;
+    text-align: left;
     vertical-align: middle;
     float: left;
     font-size: 14px;
-    color: #606266;
+    /* color: #606266; */
+    color: #000;
     line-height: 40px;
     padding: 0 12px 0 0;
     -webkit-box-sizing: border-box;

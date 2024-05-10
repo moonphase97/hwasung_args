@@ -1,0 +1,55 @@
+[class*=" el-icon-"],[class^=el-icon-] {
+    font-family: element-icons!important;
+    speak: none;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    vertical-align: baseline;
+    display: inline-block;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+.el-form--label-right .el-form-item__label {
+    text-align: right
+}
+
+.el-form-item--mini.el-form-item,.el-form-item--small.el-form-item {
+    margin-bottom: 5px
+}
+
+.el-form-item {
+    margin-bottom: 5px
+}
+
+.el-form-item__label {
+    text-align: left;
+    vertical-align: middle;
+    float: left;
+    font-size: 14px;
+    /* color: #606266; */
+    color: #000;
+    line-height: 40px;
+    padding: 0 12px 0 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+.el-form--label-right .el-form-item__label {
+    text-align: right
+}
+
+.el-form-item__label-wrap {
+    margin-left: 0px !important;
+}
+
+.el-menu,.el-menu--horizontal>.el-menu-item:not(.is-disabled):focus,.el-menu--horizontal>.el-menu-item:not(.is-disabled):hover,.el-menu--horizontal>.el-submenu .el-submenu__title:hover {
+    background-color: #263238
+}
+
+.el-menu-item:focus,.el-menu-item:hover {
+    outline: 0;
+    background-color: #020202
+}
