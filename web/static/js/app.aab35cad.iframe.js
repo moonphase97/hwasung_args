@@ -814,531 +814,87 @@
         Object(R["a"])(de, ce, le, !1, null, "4af959d0", null))
           , fe = pe.exports, 
 
-          ///// Ds: dashboard: 대시보드용
-          fd = function() {
+          ///// Ds: dashboard: 대시보드
+          Ze = function() {
             var e = this
               , t = e.$createElement
               , n = e._self._c || t;
-            return n("div", {
-                staticClass: "dashboard-main"
-            }, [n("div", {
-                staticClass: "dashboard-nav"
-            }, [e._l(e.deviceList, function(t, o) {
-                return n("el-checkbox", {
-                    key: t.name,
-                    on: {
-                        change: function(t) {
-                            return e.changeDeviceStartStatus(o)
-                        }
-                    },
-                    model: {
-                        value: t.startStatus,
-                        callback: function(n) {
-                            e.$set(t, "startStatus", n)
-                        },
-                        expression: "device.startStatus"
-                    }
-                }, [e._v(e._s(t.name))])
-            })], 2), n("div", {
-                ref: "ipc-data",
-                staticClass: "ipc-data"
-            }, [n("div", {
-                staticClass: "ipc-content"
-            }, e._l(e.deviceList, function(t, o) {
-                return n("div", {
-                    key: o,
-                    ref: "ipc-content-item-" + o,
-                    refInFor: !0,
-                    staticClass: "ipc-content-index"
-                }, [n("transition", {
-                    attrs: {
-                        name: "el-fade-in-linear"
-                    }
-                }, [e.deviceList[o].startStatus ? n("ipc-content", {
-                    staticClass: "ipc-content-item",
-                    model: {
-                        value: e.deviceList[o],
-                        callback: function(t) {
-                            e.$set(e.deviceList, o, t)
-                        },
-                        expression: "deviceList[index]"
-                    }
-                }) : e._e()], 1)], 1)
-            }), 0)]), n("div", {
-                staticClass: "ipc-action-bar"
-            }, [n("el-button", {
+            return n("iframe", {
+                staticClass: "config-dsah-main",
                 attrs: {
-                    type: "primary",
-                    loading: e.saveLoading
-                },
-                on: {
-                    click: e.save
+                    src: "https://192.168.0.100:5000/#/dashboard",
                 }
-            }, [e._v(e._s(e.$t("save conguration")))]), n("el-button", {
-                attrs: {
-                    type: "primary",
-                    loading: e.refreshLoading
-                },
-                on: {
-                    click: e.refresh
-                }
-            }, [e._v(e._s(e.$t("refresh conguration")))]), n("el-button", {
-                attrs: {
-                    type: "primary",
-                    loading: e.rebootLoading
-                },
-                on: {
-                    click: e.reboot
-                }
-            }, [e._v(e._s(e.$t("reboot device")))])], 1)])
+            }, 1)
         }
-          , ve = []
-          , ge = (n("f559"),
-        n("6b54"),
-        function() {
-            var e = this
-              , t = e.$createElement
-              , n = e._self._c || t;
-            return n("div", {
-                staticClass: "content-main"
-            }, [n("p", {
-                staticClass: "content-title"
-            }, [e._v(e._s(e.selfContent.name))]), n("div", {
-                staticClass: "content-form"
-            }, [e.selfContent.ipcConguration ? n("div", [n("p", {
-                staticClass: "content-group-title"
-            }, [e._v(e._s(this.$t("IPC settings")))]), n("el-form", {
-                staticClass: "content-ipc-form",
-                attrs: {
-                    "label-position": "left",
-                    "label-width": "auto",
-                    size: "mini",
-                    model: e.selfContent.ipcConguration,
-                    rules: e.ipcCongurationRules
-                }
-            }, [n("el-form-item", {
-                attrs: {
-                    label: e.$t("IP address"),
-                    prop: "ip"
-                }
-            }, [n("el-input", {
-                model: {
-                    value: e.selfContent.ipcConguration.ip,
-                    callback: function(t) {
-                        e.$set(e.selfContent.ipcConguration, "ip", t)
-                    },
-                    expression: "selfContent.ipcConguration.ip"
-                }
-            })], 1), n("el-form-item", {
-                attrs: {
-                    label: e.$t("port")
-                }
-            }, [n("el-input-number", {
-                attrs: {
-                    controls: !1,
-                    min: 0,
-                    max: 65535,
-                    precision: 0
-                },
-                model: {
-                    value: e.selfContent.ipcConguration.port,
-                    callback: function(t) {
-                        e.$set(e.selfContent.ipcConguration, "port", t)
-                    },
-                    expression: "selfContent.ipcConguration.port"
-                }
-            })], 1), n("el-form-item", {
-                attrs: {
-                    label: e.$t("username")
-                }
-            }, [n("el-input", {
-                model: {
-                    value: e.selfContent.ipcConguration.username,
-                    callback: function(t) {
-                        e.$set(e.selfContent.ipcConguration, "username", t)
-                    },
-                    expression: "selfContent.ipcConguration.username"
-                }
-            })], 1), n("el-form-item", {
-                attrs: {
-                    label: e.$t("password")
-                }
-            }, [n("el-input", {
-                model: {
-                    value: e.selfContent.ipcConguration.password,
-                    callback: function(t) {
-                        e.$set(e.selfContent.ipcConguration, "password", t)
-                    },
-                    expression: "selfContent.ipcConguration.password"
-                }
-            })], 1), n("el-form-item", {
-                attrs: {
-                    label: e.$t("channel")
-                }
-            }, [n("el-input", {
-                model: {
-                    value: e.selfContent.ipcConguration.channel,
-                    callback: function(t) {
-                        e.$set(e.selfContent.ipcConguration, "channel", t)
-                    },
-                    expression: "selfContent.ipcConguration.channel"
-                }
-            })], 1), n("el-form-item", {
-                attrs: {
-                    label: e.$t("protocol")
-                }
-            }, [n("el-select", {
-                model: {
-                    value: e.selfContent.ipcConguration.protocolType,
-                    callback: function(t) {
-                        e.$set(e.selfContent.ipcConguration, "protocolType", t)
-                    },
-                    expression: "selfContent.ipcConguration.protocolType"
-                }
-            }, e._l(e.protocolTypeList, function(e, t) {
-                return n("el-option", {
-                    key: t,
-                    attrs: {
-                        label: e,
-                        value: t
-                    }
-                })
-            }), 1)], 1), e.selfContent.ipcConguration.protocolType ? n("el-form-item", {
-                attrs: {
-                    label: e.$t("rtsp address")
-                }
-            }, [n("el-input", {
-                model: {
-                    value: e.selfContent.ipcConguration.rtspAddr,
-                    callback: function(t) {
-                        e.$set(e.selfContent.ipcConguration, "rtspAddr", t)
-                    },
-                    expression: "selfContent.ipcConguration.rtspAddr"
-                }
-            })], 1) : e._e()], 1)], 1) : e._e(), e.selfContent.compressionConguration ? n("div", {
-                class: e.selfContent.ipcConguration ? "content-compress" : ""
-            }, [n("p", {
-                staticClass: "content-group-title"
-            }, [e._v(e._s(this.$t("compressed parameters settings")))]), n("el-form", {
-                staticClass: "content-compress-form",
-                attrs: {
-                    "label-position": "left",
-                    "label-width": "auto",
-                    size: "mini"
-                }
-            }, [n("el-form-item", {
-                attrs: {
-                    label: e.$t("payload")
-                }
-            }, [n("el-select", {
-                model: {
-                    value: e.selfContent.compressionConguration.payload,
-                    callback: function(t) {
-                        e.$set(e.selfContent.compressionConguration, "payload", t)
-                    },
-                    expression: "selfContent.compressionConguration.payload"
-                }
-            }, e._l(e.payloadList, function(e, t) {
-                return n("el-option", {
-                    key: t,
-                    attrs: {
-                        value: e
-                    }
-                })
-            }), 1)], 1), n("el-form-item", {
-                attrs: {
-                    label: e.$t("image quality")
-                }
-            }, [n("el-select", {
-                model: {
-                    value: e.selfContent.compressionConguration.imageQuality,
-                    callback: function(t) {
-                        e.$set(e.selfContent.compressionConguration, "imageQuality", t)
-                    },
-                    expression: "selfContent.compressionConguration.imageQuality"
-                }
-            }, e._l(e.imageQualityList, function(e, t) {
-                return n("el-option", {
-                    key: t,
-                    attrs: {
-                        value: e
-                    }
-                })
-            }), 1)], 1), n("el-form-item", {
-                attrs: {
-                    label: e.$t("mode")
-                }
-            }, [n("el-select", {
-                model: {
-                    value: e.selfContent.compressionConguration.mode,
-                    callback: function(t) {
-                        e.$set(e.selfContent.compressionConguration, "mode", t)
-                    },
-                    expression: "selfContent.compressionConguration.mode"
-                }
-            }, e._l(e.modeList, function(e) {
-                return n("el-option", {
-                    key: e,
-                    attrs: {
-                        value: e
-                    }
-                })
-            }), 1)], 1), n("el-form-item", {
-                attrs: {
-                    label: e.$t("I frame interval")
-                }
-            }, [n("el-input-number", {
-                attrs: {
-                    controls: !1,
-                    min: 1,
-                    max: 1e3,
-                    precision: 0
-                },
-                model: {
-                    value: e.selfContent.compressionConguration.IFrmInterval,
-                    callback: function(t) {
-                        e.$set(e.selfContent.compressionConguration, "IFrmInterval", t)
-                    },
-                    expression: "selfContent.compressionConguration.IFrmInterval"
-                }
-            })], 1), n("el-form-item", {
-                attrs: {
-                    label: e.$t("src frame rate")
-                }
-            }, [n("el-input-number", {
-                attrs: {
-                    controls: !1,
-                    min: 1,
-                    max: 240,
-                    precision: 0
-                },
-                model: {
-                    value: e.selfContent.compressionConguration.srcFrmRate,
-                    callback: function(t) {
-                        e.$set(e.selfContent.compressionConguration, "srcFrmRate", t)
-                    },
-                    expression: "selfContent.compressionConguration.srcFrmRate"
-                }
-            })], 1), n("el-form-item", {
-                attrs: {
-                    label: e.$t("dst frame rate")
-                }
-            }, [n("el-input-number", {
-                attrs: {
-                    controls: !1,
-                    min: 1,
-                    max: 240,
-                    precision: 0
-                },
-                model: {
-                    value: e.selfContent.compressionConguration.dstFrmRate,
-                    callback: function(t) {
-                        e.$set(e.selfContent.compressionConguration, "dstFrmRate", t)
-                    },
-                    expression: "selfContent.compressionConguration.dstFrmRate"
-                }
-            })], 1), n("el-form-item", {
-                attrs: {
-                    label: e.$t("max bit rate")
-                }
-            }, [n("el-input-number", {
-                attrs: {
-                    controls: !1,
-                    min: 2,
-                    max: 102400,
-                    precision: 0
-                },
-                model: {
-                    value: e.selfContent.compressionConguration.bitRate,
-                    callback: function(t) {
-                        e.$set(e.selfContent.compressionConguration, "bitRate", t)
-                    },
-                    expression: "selfContent.compressionConguration.bitRate"
-                }
-            })], 1), n("el-form-item", {
-                attrs: {
-                    label: e.$t("IQp")
-                }
-            }, [n("el-input-number", {
-                attrs: {
-                    controls: !1,
-                    min: 0,
-                    max: 51,
-                    precision: 0
-                },
-                model: {
-                    value: e.selfContent.compressionConguration.IQp,
-                    callback: function(t) {
-                        e.$set(e.selfContent.compressionConguration, "IQp", t)
-                    },
-                    expression: "selfContent.compressionConguration.IQp"
-                }
-            })], 1), n("el-form-item", {
-                attrs: {
-                    label: e.$t("PQp")
-                }
-            }, [n("el-input-number", {
-                attrs: {
-                    controls: !1,
-                    min: 0,
-                    max: 51,
-                    precision: 0
-                },
-                model: {
-                    value: e.selfContent.compressionConguration.PQp,
-                    callback: function(t) {
-                        e.$set(e.selfContent.compressionConguration, "PQp", t)
-                    },
-                    expression: "selfContent.compressionConguration.PQp"
-                }
-            })], 1)], 1)], 1) : e._e()])])
-        }
-        )
-          , be = []
-          , he = n("7618")
-          , Ce = function e(t) {
-            if ("object" !== Object(he["a"])(t) || null === t)
-                return t;
-            var n, o = Array.isArray(t) ? [] : {};
-            for (n in t)
-                "object" === Object(he["a"])(t[n]) && e(t[n]),
-                o[n] = t[n];
-            return o
-        }
-          , ye = {
-            model: {
-                prop: "content",
-                event: "change"
-            },
-            props: {
-                content: Object
-            },
-            data: function() {
-                var e = this;
-                return {
-                    selfContent: Ce(this.content),
-                    protocolTypeList: ["onvif", "rtsp"],
-                    payloadList: ["H264", "H265", "BBW"],
-                    imageQualityList: ["720P", "1080P", "2K", "4K"],
-                    modeList: [0, 1, 2],
-                    ipcCongurationRules: {
-                        ip: [{
-                            validator: function(t, n, o) {
-                                return void 0 === n ? o(new Error(e.$t("IP address is required"))) : /^((25[0-5]|2[0-4]\d|[01]?\d\d?)\.){3}(25[0-5]|2[0-4]\d|[01]?\d\d?)$/.test(n) ? o() : o(new Error(e.$t("IP address is invalid")))
-                            }
-                        }]
-                    }
-                }
-            },
-            watch: {
-                selfContent: function(e) {
-                    this.$emit("change", e)
-                }
-            }
-        }
-          , we = ye
-          , $e = (n("278c"),
-        n("9355"),
-        Object(R["a"])(we, ge, be, !1, null, "3db6386e", null))
-          , Ie = $e.exports;
-        document.aaa = void 0,
-        document.bbb = void 0;
-        var _e = {
+          , Xe = []
+          , et = (n("28a5"),
+        n("768b"))
+          , tt = {
             data: function() {
                 return {
-                    deviceList: [],
-                    originalDeviceList: [],
-                    saveLoading: !1,
-                    refreshLoading: !1,
-                    rebootLoading: !1
+                    data: {
+                        hour: 0,
+                        minute: 0,
+                        second: 0,
+                        frequencyDays: 1,
+                        enable: !1
+                    },
+                    buttonLoading: !1
+                }
+            },
+            computed: {
+                ntpTime: {
+                    get: function() {
+                        var e = this.data.hour
+                          , t = this.data.minute
+                          , n = this.data.second;
+                        return "".concat(e, " ").concat(t, " ").concat(n)
+                    },
+                    set: function(e) {
+                        var t = e.split(" ")
+                          , n = Object(et["a"])(t, 3)
+                          , o = n[0]
+                          , s = n[1]
+                          , a = n[2];
+                        this.data.hour = parseInt(o),
+                        this.data.minute = parseInt(s),
+                        this.data.second = parseInt(a)
+                    }
                 }
             },
             created: function() {
-                this.refresh()
+                var e = this;
+                ne().then(function(t) {
+                    e.data = t.data
+                }).catch(function() {
+                    e.data = {
+                        hour: 0,
+                        minute: 0,
+                        second: 0,
+                        frequencyDays: 1,
+                        enable: !1
+                    },
+                    setTimeout(function() {
+                        e.$refs.dataForm.clearValidate()
+                    }, 0)
+                })
             },
             methods: {
-                changeDeviceStartStatus: function(e) {
-                    var t = this;
-                    setTimeout(function() {
-                        !0 === t.deviceList[e].startStatus && t.$refs["ipc-data"].scrollTo({
-                            top: t.$refs["ipc-content-item-".concat(e.toString())][0].offsetTop - 110,
-                            left: 0,
-                            behavior: "smooth"
-                        })
-                    }, 0)
-                },
                 save: function() {
                     var e = this;
-                    this.saveLoading = !0,
-                    W({
-                        videos: this.originalDeviceList
-                    }).then(function() {
-                        e.saveLoading = !1,
-                        e.$message.success(e.$t("IPC Congurations saved successfully")),
-                        document.rebootTip || (document.rebootTip = !0,
-                        e.$notify({
-                            message: e.$t("you need to reboot device"),
-                            position: "top-right",
-                            offset: 100,
-                            showClose: !1,
-                            duration: 0,
-                            type: "warning"
-                        }))
+                    this.buttonLoading = !0,
+                    oe(this.data).then(function() {
+                        e.buttonLoading = !1,
+                        e.$message.success(e.$t("Reboot config changed successfully"))
                     }).catch(function() {
-                        e.saveLoading = !1
+                        e.buttonLoading = !1
                     })
-                },
-                refresh: function() {
-                    var e = this;
-                    this.refreshLoading = !0,
-                    this.originalDeviceList = [],
-                    this.deviceList = [],
-                    K().then(function(t) {
-                        e.refreshLoading = !1,
-                        e.originalDeviceList = t.data.videos.map(function(e) {
-                            return e.ipcConguration || delete e.ipcConguration,
-                            e
-                        }),
-                        e.deviceList = e.originalDeviceList.filter(function(e) {
-                            return e.name.startsWith("IPC")
-                        })
-                    }).catch(function() {
-                        e.refreshLoading = !1,
-                        e.originalDeviceList = [],
-                        e.deviceList = []
-                    })
-                },
-                reboot: function() {
-                    var e = this;
-                    this.$messageBox.confirm(this.$t("Reboot the device?\nYes,and the device cannot be accessed In about two minutes."), this.$t("tip"), {
-                        confirmButtonText: this.$t("confirm"),
-                        cancelButtonText: this.$t("cancel"),
-                        type: "warning"
-                    }).then(function() {
-                        return X().then(function() {
-                            e.$message({
-                                type: "success",
-                                message: e.$t("Reboot device successfully!")
-                            }),
-                            setTimeout(function() {
-                                location.reload()
-                            }, 1e3)
-                        }).catch(function() {
-                            e.$message({
-                                type: "error",
-                                message: e.$t("Reboot device failed!")
-                            })
-                        })
-                    }).catch(function() {})
                 }
-            },
-            components: {
-                "ipc-content": Ie
             }
         }
-          , Pe = _e
-          , ke = (n("4b68"),
-        Object(R["a"])(Pe, fd, ve, !1, null, "dscd6b16", null))
+          , nt = tt
+          , ke = (n("7da5"),
+        Object(R["a"])(nt, Ze, Xe, !1, null, "dscd6b16", null))
           , Ds = ke.exports,
 
           
@@ -1430,6 +986,8 @@
           , ve = []
           , ge = (n("f559"),
         n("6b54"),
+
+        ///// IPC 세팅 카드
         function() {
             var e = this
               , t = e.$createElement
@@ -2561,7 +2119,7 @@
                 component: fe,
                 children: [{
                     path: "",
-                    redirect: "ipc"
+                    redirect: "dashboard"
                 }, 
                 //대시보드 생성
                 {
@@ -2639,14 +2197,14 @@
         s.a
     },
     6188: function(e, t, n) {
-        e.exports = "https://raw.githubusercontent.com/moonphase97/hwasung_args/master/hwasung/white/hwasung_CI_240x65.png"
+        e.exports = "https://raw.githubusercontent.com/moonphase97/hwasung_args/master/coconutlab/white/Coconutlab_CI_240x65.png"
     },
     "61b6": function(e) {
-        e.exports = JSON.parse('{"_utils":"~~~~~~~~~~~~~~~~~~","common bottom copy right":"Copyright CoconutLab Company. All rights reserved.","common bottom public record":"","simadada company":"Hwasung","chinese":"简体中文","english":"English","korean":"한국어","VDMS-T-4":"VDMS-T-4","please input your account":"请输入您的账户","please input the password":"请输入对应密码","account is required":"账户不可为空","password is required":"密码不可为空","5-15 characters,letters/numbers/underscores":"5~15位,字母数字或下划线","login":"登录","logout":"登出","you need to reboot device":"你需要重新启动设备来应用保存的配置!","reboot device":"重新启动","Reboot the device?\\nYes,and the device cannot be accessed In about two minutes.":"确定要重启设备吗？\\n确定则设备将在大概两分钟内无法访问。","tip":"提示","your password is not safe":"当前密码为默认密码,请修改密码后再进行设备操作!","cancel":"取消","Reboot device successfully!":"重启设备成功！","Reboot device failed!":"重启设备失败！","Reset the device?":"确定要重置设备吗？\\n确定则设备将在大概两分钟内无法访问。","reset device":"重置设备","Reset device successfully!":"重置设备成功!","Reset device failed!":"重置设备失败!","_device":"~~~~~~~~~~~~~~~~~~","video parameters":"视频参数","IPC settings":"摄像头设置","IP address":"IP地址","port":"端口","username":"用户名","password":"密码","channel":"通道号","protocol":"传输协议","rtsp address":"rtsp地址","compressed parameters settings":"压缩参数设置","payload":"编码格式","image quality":"图像质量","mode":"压缩方式","I frame interval":"I帧间隔","src frame rate":"原始帧率","dst frame rate":"目标帧率","max bit rate":"码率上限","IQp":"压缩参数1","PQp":"压缩参数2","IPC Congurations saved successfully":"视频参数配置更新成功！","_network":"~~~~~~~~~~~~~~~~~~","network settings":"网络设置","save conguration":"保存配置","refresh conguration":"刷新配置","device conguration":"设备配置","subnet mask":"子网掩码","gateway":"网关","cloudserver":"云服务器","enable":"启用","enabled":"已启用","diabled":"已禁用","MAC address":"MAC地址","IP address is required":"IP地址不可为空","IP address is invalid":"IP地址无效","Subnet mask is required":"子网掩码不可为空","Subnet mask is invalid":"子网掩码无效","Gateway IP address is required":"网关IP地址不可为空","Gateway IP address is invalid":"网关IP地址无效","Cloud server IP address is required":"云服务器IP地址不可为空","Cloud server IP address is invalid":"云服务器IP地址无效","Mac address is required":"Mac地址不可为空","Mac address is invalid":"Mac地址无效","Device config changed successfully":"网络设置更新成功！","_account":"~~~~~~~~~~~~~~~~~~","account management":"账户管理","new account":"新账户","new password":"新密码","old password":"旧密码","please input the old password":"请输入原来的密码","please input the new password":"请输入新的密码","optional":"可选","confirm":"确认","account and password changed successfully":"账户密码修改成功！","_version":"~~~~~~~~~~~~~~~~~~","update version":"更新升级","drop file here,or":"将文件拖到此处，或","click to upload":"点击上传","current version":"当前版本号","new version":"新的版本号","only one file can be uploaded":"只能上传一个文件！","Upload new version file successfully!":"上传新版本文件成功！","Upload new version file failed!":"上传新文件失败！","_ntp":"~~~~~~~~~~~~~~~~~~~","ntp config":"校时设置","ntp ip":"NTP服务器IP","ntp port":"NTP服务器端口","ntp frequency":"校时周期/天","ntp time":"校时时间点","ntpInfo changed successfully":"NTP校时服务器设置成功！","_autoreboot":"~~~~~~~~~~~~~~~~~~~","auto reboot config":"自动重启","day frequency":"重启周期/天","reboot time":"重启时间","Reboot config changed successfully":"自动重启设置修改成功！"}')
+        e.exports = JSON.parse('{"_utils":"~~~~~~~~~~~~~~~~~~","common bottom copy right":"Copyright CoconutLab Company. All rights reserved.","common bottom public record":"","simadada company":"코코넛랩","chinese":"简体中文","english":"English","korean":"한국어","VDMS-T-4":"VDMS-T-4","please input your account":"请输入您的账户","please input the password":"请输入对应密码","account is required":"账户不可为空","password is required":"密码不可为空","5-15 characters,letters/numbers/underscores":"5~15位,字母数字或下划线","login":"登录","logout":"登出","you need to reboot device":"你需要重新启动设备来应用保存的配置!","reboot device":"重新启动","Reboot the device?\\nYes,and the device cannot be accessed In about two minutes.":"确定要重启设备吗？\\n确定则设备将在大概两分钟内无法访问。","tip":"提示","your password is not safe":"当前密码为默认密码,请修改密码后再进行设备操作!","cancel":"取消","Reboot device successfully!":"重启设备成功！","Reboot device failed!":"重启设备失败！","Reset the device?":"确定要重置设备吗？\\n确定则设备将在大概两分钟内无法访问。","reset device":"重置设备","Reset device successfully!":"重置设备成功!","Reset device failed!":"重置设备失败!","_device":"~~~~~~~~~~~~~~~~~~","video parameters":"视频参数","IPC settings":"摄像头设置","IP address":"IP地址","port":"端口","username":"用户名","password":"密码","channel":"通道号","protocol":"传输协议","rtsp address":"rtsp地址","compressed parameters settings":"压缩参数设置","payload":"编码格式","image quality":"图像质量","mode":"压缩方式","I frame interval":"I帧间隔","src frame rate":"原始帧率","dst frame rate":"目标帧率","max bit rate":"码率上限","IQp":"压缩参数1","PQp":"压缩参数2","IPC Congurations saved successfully":"视频参数配置更新成功！","_network":"~~~~~~~~~~~~~~~~~~","network settings":"网络设置","save conguration":"保存配置","refresh conguration":"刷新配置","device conguration":"设备配置","subnet mask":"子网掩码","gateway":"网关","cloudserver":"云服务器","enable":"启用","enabled":"已启用","diabled":"已禁用","MAC address":"MAC地址","IP address is required":"IP地址不可为空","IP address is invalid":"IP地址无效","Subnet mask is required":"子网掩码不可为空","Subnet mask is invalid":"子网掩码无效","Gateway IP address is required":"网关IP地址不可为空","Gateway IP address is invalid":"网关IP地址无效","Cloud server IP address is required":"云服务器IP地址不可为空","Cloud server IP address is invalid":"云服务器IP地址无效","Mac address is required":"Mac地址不可为空","Mac address is invalid":"Mac地址无效","Device config changed successfully":"网络设置更新成功！","_account":"~~~~~~~~~~~~~~~~~~","account management":"账户管理","new account":"新账户","new password":"新密码","old password":"旧密码","please input the old password":"请输入原来的密码","please input the new password":"请输入新的密码","optional":"可选","confirm":"确认","account and password changed successfully":"账户密码修改成功！","_version":"~~~~~~~~~~~~~~~~~~","update version":"更新升级","drop file here,or":"将文件拖到此处，或","click to upload":"点击上传","current version":"当前版本号","new version":"新的版本号","only one file can be uploaded":"只能上传一个文件！","Upload new version file successfully!":"上传新版本文件成功！","Upload new version file failed!":"上传新文件失败！","_ntp":"~~~~~~~~~~~~~~~~~~~","ntp config":"校时设置","ntp ip":"NTP服务器IP","ntp port":"NTP服务器端口","ntp frequency":"校时周期/天","ntp time":"校时时间点","ntpInfo changed successfully":"NTP校时服务器设置成功！","_autoreboot":"~~~~~~~~~~~~~~~~~~~","auto reboot config":"自动重启","day frequency":"重启周期/天","reboot time":"重启时间","Reboot config changed successfully":"自动重启设置修改成功！"}')
     },
     "64d7": function(e, t, n) {},
     "76ff": function(e) {
-        e.exports = JSON.parse('{"_utils":"~~~~~~~~~~~~~~~~~~","common bottom copy right":"Copyright CoconutLab Company. All rights reserved.","common bottom public record":"","simadada company":"Hwasung","chinese":"简体中文","english":"English","korean":"한국어","VDMS-T-4":"VDMS-T-4","please input your account":"Please input your account","please input the password":"Please input the password","account is required":"Account is required","password is required":"Password is required","5-15 characters,letters/numbers/underscores":"5-15 letters/numbers/underscores","login":"Login","logout":"Logout","you need to reboot device":"You need to reboot device to use saved config!","reboot device":"Reboot device","Reboot the device?\\nYes,and the device cannot be accessed In about two minutes.":"Reboot the device?\\nYes,and the device cannot be accessed In about two minutes.","tip":"tip","your password is not safe":"Use default password is not safe, please change the password before the device operation!","cancel":"Cancel","Reboot device successfully!":"Reboot device successfully!","Reboot device failed!":"Reboot device failed!","reset device":"Reset device","Reset the device?":"Reset the device?\\nYes,and the device cannot be accessed In about two minutes.","Reset device successfully!":"Reset device successfully!","Reset device failed!":"Reset device failed!","_device":"~~~~~~~~~~~~~~~~~~","video parameters":"Camera","IPC settings":"IPC settings","IP address":"IP address","port":"port","username":"username","password":"password","channel":"channel","protocol":"protocol","rtsp address":"rtsp address","compressed parameters settings":"compressed parameters settings","payload":"payload","image quality":"image quality","mode":"mode","I frame interval":"I frame interval","src frame rate":"src frame rate","dst frame rate":"dst frame rate","max bit rate":"max bit rate","IQp":"IQp","PQp":"PQp","save conguration":"Save configuration","refresh conguration":"Refresh configuration","IPC Congurations saved successfully":"Camera Configurations saved successfully!","_network":"~~~~~~~~~~~~~~~~~~","network settings":"Device","device conguration":"Device configuration","subnet mask":"subnet mask","gateway":"gateway","cloudserver":"cloud server","enable":"Enable","enabled":"enabled","diabled":"diabled","MAC address":"MAC address","IP address is required":"IP address is required","IP address is invalid":"IP address is invalid","Subnet mask is required":"Subnet mask is required","Subnet mask is invalid":"Subnet mask is invalid","Gateway IP address is required":"Gateway IP address is required","Gateway IP address is invalid":"Gateway IP address is invalid","Cloud server IP address is required":"Cloud server IP address is required","Cloud server IP address is invalid":"Cloud server IP address is invalid","Mac address is required":"Mac address is required","Mac address is invalid":"Mac address is invalid","Device config changed successfully":"Device Configurations saved successfully!","_account":"~~~~~~~~~~~~~~~~~~","account management":"Account","new account":"new account","new password":"new password","old password":"old password","please input the old password":"Please input the old password","please input the new password":"please input the new password","optional":"Optional","confirm":"Confirm","account and password changed successfully":"Account and password changed successfully!","_version":"~~~~~~~~~~~~~~~~~~","update version":"Version","drop file here,or":"Drop file here,or","click to upload":"click to upload","current version":"current version","new version":"new version","only one file can be uploaded":"Only one file can be uploaded!","Upload new version file successfully!":"Upload new version file successfully!","Upload new version file failed!":"Upload new version file failed!","_ntp":"~~~~~~~~~~~~~~~~~~~","ntp config":"Ntp Timing","ntp ip":"NTP server IP","ntp port":"NTP server Port","ntp frequency":"Frequency/Day","ntp time":"Time of Day","ntpInfo changed successfully":"Ntp Timing config changed successfully!","_autoreboot":"~~~~~~~~~~~~~~~~~~~","auto reboot config":"Auto Reboot","day frequency":"Frequency/day","reboot time":"Reboot Time","Reboot config changed successfully":"Auto reboot config changed successfully!"}')
+        e.exports = JSON.parse('{"_utils":"~~~~~~~~~~~~~~~~~~","common bottom copy right":"Copyright CoconutLab Company. All rights reserved.","common bottom public record":"","simadada company":"코코넛랩","chinese":"简体中文","english":"English","korean":"한국어","VDMS-T-4":"VDMS-T-4","please input your account":"Please input your account","please input the password":"Please input the password","account is required":"Account is required","password is required":"Password is required","5-15 characters,letters/numbers/underscores":"5-15 letters/numbers/underscores","login":"Login","logout":"Logout","you need to reboot device":"You need to reboot device to use saved config!","reboot device":"Reboot device","Reboot the device?\\nYes,and the device cannot be accessed In about two minutes.":"Reboot the device?\\nYes,and the device cannot be accessed In about two minutes.","tip":"tip","your password is not safe":"Use default password is not safe, please change the password before the device operation!","cancel":"Cancel","Reboot device successfully!":"Reboot device successfully!","Reboot device failed!":"Reboot device failed!","reset device":"Reset device","Reset the device?":"Reset the device?\\nYes,and the device cannot be accessed In about two minutes.","Reset device successfully!":"Reset device successfully!","Reset device failed!":"Reset device failed!","_device":"~~~~~~~~~~~~~~~~~~","video parameters":"Camera","IPC settings":"IPC settings","IP address":"IP address","port":"port","username":"username","password":"password","channel":"channel","protocol":"protocol","rtsp address":"rtsp address","compressed parameters settings":"compressed parameters settings","payload":"payload","image quality":"image quality","mode":"mode","I frame interval":"I frame interval","src frame rate":"src frame rate","dst frame rate":"dst frame rate","max bit rate":"max bit rate","IQp":"IQp","PQp":"PQp","save conguration":"Save configuration","refresh conguration":"Refresh configuration","IPC Congurations saved successfully":"Camera Configurations saved successfully!","_network":"~~~~~~~~~~~~~~~~~~","network settings":"Device","device conguration":"Device configuration","subnet mask":"subnet mask","gateway":"gateway","cloudserver":"cloud server","enable":"Enable","enabled":"enabled","diabled":"diabled","MAC address":"MAC address","IP address is required":"IP address is required","IP address is invalid":"IP address is invalid","Subnet mask is required":"Subnet mask is required","Subnet mask is invalid":"Subnet mask is invalid","Gateway IP address is required":"Gateway IP address is required","Gateway IP address is invalid":"Gateway IP address is invalid","Cloud server IP address is required":"Cloud server IP address is required","Cloud server IP address is invalid":"Cloud server IP address is invalid","Mac address is required":"Mac address is required","Mac address is invalid":"Mac address is invalid","Device config changed successfully":"Device Configurations saved successfully!","_account":"~~~~~~~~~~~~~~~~~~","account management":"Account","new account":"new account","new password":"new password","old password":"old password","please input the old password":"Please input the old password","please input the new password":"please input the new password","optional":"Optional","confirm":"Confirm","account and password changed successfully":"Account and password changed successfully!","_version":"~~~~~~~~~~~~~~~~~~","update version":"Version","drop file here,or":"Drop file here,or","click to upload":"click to upload","current version":"current version","new version":"new version","only one file can be uploaded":"Only one file can be uploaded!","Upload new version file successfully!":"Upload new version file successfully!","Upload new version file failed!":"Upload new version file failed!","_ntp":"~~~~~~~~~~~~~~~~~~~","ntp config":"Ntp Timing","ntp ip":"NTP server IP","ntp port":"NTP server Port","ntp frequency":"Frequency/Day","ntp time":"Time of Day","ntpInfo changed successfully":"Ntp Timing config changed successfully!","_autoreboot":"~~~~~~~~~~~~~~~~~~~","auto reboot config":"Auto Reboot","day frequency":"Frequency/day","reboot time":"Reboot Time","Reboot config changed successfully":"Auto reboot config changed successfully!"}')
     },
     "7da5": function(e, t, n) {
         "use strict";
@@ -2655,7 +2213,7 @@
         s.a
     },
     "84d4": function(e) {
-        e.exports = JSON.parse('{"_utils":"~~~~~~~~~~~~~~~~~~","common bottom copy right":"(주)화성 Ⓒ Hwasung Co., Ltd. All rights reserved.","common bottom public record":"","simadada company":"(주)화성","chinese":"简体中文","english":"English","korean":"한국어","VDMS-T-4":"VDMS-T-4","please input your account":"아이디","please input the password":"비밀번호","account is required":"필수","password is required":"필수","5-15 characters,letters/numbers/underscores":"5~15자리 대소문자, 언더바( _ )","login":"로그인","logout":"로그아웃","you need to reboot device":"저장된 설정을 적용하려면 새로 시작해야 합니다!","reboot device":"재부팅","Reboot the device?\\nYes,and the device cannot be accessed In about two minutes.":"장치를 재부팅 하시겠습니까?","tip":"알림","your password is not safe":"비밀번호 변경 후 사용하세요.","cancel":"아니오","Reboot device successfully!":"장치 재가동에 성공했습니다!","Reboot device failed!":"장치를 다시 여는 데 실패했습니다!","reset device":"장치 초기화","Reset the device?":"초기화하시겠습니까?","Reset device successfully!":"초기화에 성공함!","Reset device failed!":"초기화에 실패했습니다!","_device":"~~~~~~~~~~~~~~~~~~","video parameters":"카메라 설정","IPC settings":"카메라 설정","IP address":"IP주소","port":"포트","username":"아이디","password":"비밀번호","channel":"채널","protocol":"프로토콜","rtsp address":"rtsp주소","compressed parameters settings":"압축 매개변수 설정","payload":"압축알고리즘","image quality":"해상도","mode":"압축모드","I frame interval":"i-프레임 간격","src frame rate":"시작점 프레임레이트","dst frame rate":"도착점 프레임레이트","max bit rate":"비트레이트","IQp":"인코더 매개변수1(IQp)","PQp":"인코더 매개변수2(PQp)","IPC Congurations saved successfully":"카메라 설정이 업데이트 되었습니다!","_network":"~~~~~~~~~~~~~~~~~~","network settings":"네트워크 설정","save conguration":"설정 저장","refresh conguration":"새로고침","device conguration":"장치 설정","subnet mask":"서브넷마스크","gateway":"게이트웨이","cloudserver":"클라우드서버","enable":"사용","enabled":"활성화됨","diabled":"비활성화됨","MAC address":"MAC주소","IP address is required":"필요한","IP address is invalid":"유효하지","Subnet mask is required":"필요한","Subnet mask is invalid":"유효하지","Gateway IP address is required":"필요한","Gateway IP address is invalid":"유효하지","Cloud server IP address is required":"필요한","Cloud server IP address is invalid":"유효하지","Mac address is required":"필요한","Mac address is invalid":"유효하지","Device config changed successfully":"장치 설정이 업데이트 되었습니다!","_account":"~~~~~~~~~~~~~~~~~~","account management":"계정 설정","new account":"신규 계정","new password":"신규 비밀번호","old password":"이전 비밀번호","please input the old password":"이전 암호","please input the new password":"새 암호","optional":"선택","confirm":"적용","account and password changed successfully":"계정 비밀번호 변경 성공!","_version":"~~~~~~~~~~~~~~~~~~","update version":"업데이트","drop file here,or":"첨부파일을 마우스로 끌어 넣으세요.","click to upload":"","current version":"현재 버전","new version":"새로운 버전","only one file can be uploaded":"한 개의 파일만 업로드 하세요.","Upload new version file successfully!":"새 파일 업로드하는 데 성공했습니다!","Upload new version file failed!":"새 파일을 업로드하는 데 실패했습니다!","_ntp":"~~~~~~~~~~~~~~~~~~~","ntp config":"NTP 설정","ntp ip":"NTP 서버 IP","ntp port":"NTP 서버 포트","ntp frequency":"교시 주기/일","ntp time":"교시 시간","ntpInfo changed successfully":"NTP 서버가 설정되었습니다!","_autoreboot":"~~~~~~~~~~~~~~~~~~~","auto reboot config":"재부팅 스케줄","day frequency":"주기/일","reboot time":"재부팅 시간설정","Reboot config changed successfully":"설정을 자동으로 다시 시작하였습니다!"}')
+        e.exports = JSON.parse('{"_utils":"~~~~~~~~~~~~~~~~~~","common bottom copy right":"주식회사 코코넛랩 © Copyright CoconutLab Company. All rights reserved.","common bottom public record":"","simadada company":"코코넛랩","chinese":"简体中文","english":"English","korean":"한국어","VDMS-T-4":"VDMS-T-4","please input your account":"아이디","please input the password":"비밀번호","account is required":"필수","password is required":"필수","5-15 characters,letters/numbers/underscores":"5~15자리 대소문자, 언더바( _ )","login":"로그인","logout":"로그아웃","you need to reboot device":"저장된 설정을 적용하려면 새로 시작해야 합니다!","reboot device":"재부팅","Reboot the device?\\nYes,and the device cannot be accessed In about two minutes.":"장치를 재부팅 하시겠습니까?","tip":"알림","your password is not safe":"비밀번호 변경 후 사용하세요.","cancel":"아니오","Reboot device successfully!":"장치 재가동에 성공했습니다!","Reboot device failed!":"장치를 다시 여는 데 실패했습니다!","reset device":"장치 초기화","Reset the device?":"초기화하시겠습니까?","Reset device successfully!":"초기화에 성공함!","Reset device failed!":"초기화에 실패했습니다!","_device":"~~~~~~~~~~~~~~~~~~","video parameters":"카메라 설정","IPC settings":"카메라 설정","IP address":"IP주소","port":"포트","username":"아이디","password":"비밀번호","channel":"채널","protocol":"프로토콜","rtsp address":"rtsp주소","compressed parameters settings":"압축 매개변수 설정","payload":"압축알고리즘","image quality":"해상도","mode":"압축모드","I frame interval":"i-프레임 간격","src frame rate":"시작점 프레임레이트","dst frame rate":"도착점 프레임레이트","max bit rate":"비트레이트","IQp":"인코더 매개변수1(IQp)","PQp":"인코더 매개변수2(PQp)","IPC Congurations saved successfully":"카메라 설정이 업데이트 되었습니다!","_network":"~~~~~~~~~~~~~~~~~~","network settings":"네트워크 설정","save conguration":"설정 저장","refresh conguration":"새로고침","device conguration":"장치 설정","subnet mask":"서브넷마스크","gateway":"게이트웨이","cloudserver":"클라우드서버","enable":"사용","enabled":"활성화됨","diabled":"비활성화됨","MAC address":"MAC주소","IP address is required":"필요한","IP address is invalid":"유효하지","Subnet mask is required":"필요한","Subnet mask is invalid":"유효하지","Gateway IP address is required":"필요한","Gateway IP address is invalid":"유효하지","Cloud server IP address is required":"필요한","Cloud server IP address is invalid":"유효하지","Mac address is required":"필요한","Mac address is invalid":"유효하지","Device config changed successfully":"장치 설정이 업데이트 되었습니다!","_account":"~~~~~~~~~~~~~~~~~~","account management":"계정 설정","new account":"신규 계정","new password":"신규 비밀번호","old password":"이전 비밀번호","please input the old password":"이전 암호","please input the new password":"새 암호","optional":"선택","confirm":"적용","account and password changed successfully":"계정 비밀번호 변경 성공!","_version":"~~~~~~~~~~~~~~~~~~","update version":"업데이트","drop file here,or":"첨부파일을 마우스로 끌어 넣으세요.","click to upload":"","current version":"현재 버전","new version":"새로운 버전","only one file can be uploaded":"한 개의 파일만 업로드 하세요.","Upload new version file successfully!":"새 파일 업로드하는 데 성공했습니다!","Upload new version file failed!":"새 파일을 업로드하는 데 실패했습니다!","_ntp":"~~~~~~~~~~~~~~~~~~~","ntp config":"NTP 설정","ntp ip":"NTP 서버 IP","ntp port":"NTP 서버 포트","ntp frequency":"교시 주기/일","ntp time":"교시 시간","ntpInfo changed successfully":"NTP 서버가 설정되었습니다!","_autoreboot":"~~~~~~~~~~~~~~~~~~~","auto reboot config":"재부팅 스케줄","day frequency":"주기/일","reboot time":"재부팅 시간설정","Reboot config changed successfully":"설정을 자동으로 다시 시작하였습니다!"}')
     },
     "8eee": function(e, t, n) {
         "use strict";
@@ -2686,7 +2244,7 @@
     },
     c639: function(e, t, n) {},
     cf05: function(e, t, n) {
-        e.exports = "https://raw.githubusercontent.com/moonphase97/hwasung_args/master/hwasung/color/hwasung_CI_SQ_1000x680.png"
+        e.exports = "https://raw.githubusercontent.com/moonphase97/hwasung_args/master/coconutlab/black/coconutlab_CI.png"
     },
     e1b7: function(e, t, n) {
         "use strict";
