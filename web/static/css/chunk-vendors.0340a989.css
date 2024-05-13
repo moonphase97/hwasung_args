@@ -12,7 +12,7 @@
 
 @font-face {
     font-family: element-icons;
-    src: url(../../static/fonts/element-icons.535877f5.woff) format("woff"), url(../../static/fonts/element-icons.732389de.ttf) format("truetype");
+    src: url(/static/fonts/element-icons.535877f5.woff) format("woff"), url(/static/fonts/element-icons.732389de.ttf) format("truetype");
     font-weight: 400;
     font-style: normal
 }

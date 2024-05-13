@@ -1,3 +1,4 @@
+
 [class*=" el-icon-"],[class^=el-icon-] {
     font-family: element-icons!important;
     speak: none;
@@ -52,4 +53,25 @@
 .el-menu-item:focus,.el-menu-item:hover {
     outline: 0;
     background-color: #020202
+}
+
+/* IPC radio 버튼 */
+.el-checkbox__input.is-checked .el-checkbox__inner,.el-checkbox__input.is-indeterminate .el-checkbox__inner {
+    background-color: #f8d400;
+    border-color: #f8d400;
+}
+.el-checkbox__input.is-focus .el-checkbox__inner {
+    border-color: #c4a800
+}
+
+.el-checkbox__input.is-checked+.el-checkbox__label {
+    color: #606266;
+    font-weight: bold;
+}
+
+/* 버튼 */
+.el-button--primary {
+    color: #fff;
+    background-color: #5dacdf;
+    border-color: #5dacdf
 }
