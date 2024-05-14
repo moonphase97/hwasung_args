@@ -36,9 +36,9 @@
 }
 
 .login-background-img-1[data-v-307a9f85] {
-    top: 0;
+    /* top: 0; */
     left: 0;
-    margin-top: -6.17%;
+    margin-top: -10%;
     position: absolute;
     /* margin-top: 6.17%;
     margin-left: 12.5%; */
@@ -427,6 +427,16 @@ span[data-v-4af959d0] {
     margin-left: 23px
 }
 
+.dash-title[data-v-dscd6b16] {
+    margin-left: 40px;
+    margin-top: 40px;
+    font-size: 24px;
+    /* font-weight: 400; */
+    font-weight: bold;
+    color: #000;
+    line-height: 8px
+}
+
 .device-title[data-v-8019d266] {
     margin-left: 60px;
     margin-top: 60px;
@@ -436,6 +446,7 @@ span[data-v-4af959d0] {
     color: #000;
     line-height: 8px
 }
+
 
 .account-title[data-v-972dd9e2] {
     margin-left: 60px;
